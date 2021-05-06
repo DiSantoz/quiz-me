@@ -49,6 +49,7 @@ function displayQuestion() {
 
     for (var i = 0; i < choicesLenth; i++) {
         var questionListItem = document.createElement("li");
+        questionListItem.className = "choices-list";
         questionListItem.textContent = choices[i];
         choicesEl.append(questionListItem);
     }
@@ -67,6 +68,7 @@ function checkAnswer(event) {
     clearInterval(intervalId);
     if (event.target.matches("li")) {
         var answer = event.target.textContent;
+        resultEl.className = "answer";
         if (answer === questions[questionIndex].answer) {
             resultEl.textContent = "Correct";
             highScore++;
@@ -87,7 +89,7 @@ function endQuiz() {
 // time will decrease by 1 second
 function updateTime() {
     time--;
-    timerEl.textContent = time;
+    timerEl.textContent ='Time: ' + time;
     if (time <= 0) {
         endQuiz();
     }

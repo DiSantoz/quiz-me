@@ -1,6 +1,49 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+/* styling for time */
+.timer{
+    width: 100%;
+    padding: 30px 30px;
+    text-align: right;
+    font-size: 20px;
+}
+/* styling for question */
+.question{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+}
+/* styling for multiple choices */
+.choices{
+    font-size: 27px;
+    margin: auto;
+    list-style: none;
+    padding: 30px;
+    position: absolute;
+    left: 320px;
+}
+
+.choices-list{
+    border: 2px solid purple;
+    border-radius: 8px;
+    margin: 7px;
+    background-color: rgb(110, 40, 110);
+    color: white;
+    padding: 5px;
+}
+
+.choices-list:hover{
+    filter: brightness(200%);
+}
+
+.answer{
+    font-style: italic;
+    font-size: 50px;
+    position: relative;
+    text-align: center;
+    bottom: 40px;
+    padding-top: 300px;
 }
