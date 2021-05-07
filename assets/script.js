@@ -6,6 +6,8 @@ var questionEl = document.querySelector("#question");
 var choicesEl = document.querySelector("#choices");
 // results DOM element (correct or incorrect)
 var resultEl = document.querySelector("#result");
+// High score DOM element
+var hightScoreEl = document.querySelector("#viewHighScore");
 
 var questionIndex = 0;
 var highScore = 0;
@@ -94,6 +96,8 @@ function updateTime() {
         endQuiz();
     }
 }
+
+localStorage.setItem('highScore', highScore);
 
 displayQuestion();
 choicesEl.addEventListener("click", checkAnswer);
