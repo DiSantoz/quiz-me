@@ -33,6 +33,7 @@
     background-color: rgb(110, 40, 110);
     color: white;
     padding: 5px;
+    font-size: 20px;
 }
 
 .choices-list:hover{

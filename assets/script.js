@@ -19,6 +19,11 @@ var intervalId;
 // array of all questions
 var questions = [
     {
+        question: "Inside which HTML element do we put the JavaScript?",
+        choices: ["<script>", "<scripting>", "<javascript>", "<js>"],
+        answer: "<script>",
+    },
+    {
         question: "Commonly used data types DO NOT include:",
         choices: ["strings", "booleans", "alerts", "numbers"],
         answer: "alerts",
@@ -51,9 +56,12 @@ function displayQuestion() {
 
     for (var i = 0; i < choicesLenth; i++) {
         var questionListItem = document.createElement("li");
-        questionListItem.className = "choices-list";
-        questionListItem.textContent = choices[i];
-        choicesEl.append(questionListItem);
+        var buttonChoicesEl = document.createElement("button");
+        buttonChoicesEl.textContent = choices[i];
+        buttonChoicesEl.className = "choices-list";
+        questionListItem.appendChild(buttonChoicesEl);
+        //questionListItem.textContent = choices[i];//
+        choicesEl.appendChild(questionListItem);
     }
 }
 // next question will display as long as timer is not 0 or no questions remain
@@ -101,3 +109,4 @@ localStorage.setItem('highScore', highScore);
 
 displayQuestion();
 choicesEl.addEventListener("click", checkAnswer);
+
