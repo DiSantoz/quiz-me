@@ -78,7 +78,6 @@ function checkAnswer(event) {
     clearInterval(intervalId);
     if (event.target.matches("li")) {
         var answer = event.target.textContent;
-        resultEl.className = "answer";
         if (answer === questions[questionIndex].answer) {
             resultEl.textContent = "Correct";
             highScore++;
@@ -105,8 +104,6 @@ function updateTime() {
     }
 }
 
-localStorage.setItem('highScore', highScore);
 
 displayQuestion();
 choicesEl.addEventListener("click", checkAnswer);
-
