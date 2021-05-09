@@ -17,7 +17,7 @@
             var list = document.createElement("li");
             var textnode = document.createTextNode(highScore[i]);
             list.appendChild(textnode);
-            list.textContent = JSON.stringify(highScore[i]);
+            list.textContent = highScore[i].initials + " : " + highScore[i].score;
             scoreList.appendChild(list);
         }
     </script>
