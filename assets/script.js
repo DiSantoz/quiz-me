@@ -1,8 +1,8 @@
 var questions = [
     {
-      question: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts",
+      question: "JavaScipt is a ___ - side programming language:",
+      choices: ["client", "server", "both", "coffee"],
+      answer: "both",
     },
     {
         question: "Inside which HTML element do we put the JavaScript?",
@@ -15,6 +15,22 @@ var questions = [
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
       answer: "parentheses",
     },
+    {
+        question: "How to insert a comment that has more than one line?",
+        choices: ["//Like this//", "/*Like this*/", "<!--Like this-->"],
+        answer: "//Like this//",
+    },
+    {
+        question: "Which of the following will write the message 'Hello World!' in an alert box?",
+        choices: ["alertbox('Hello World!')", "alert('Hello World!')", "displayalert('Hello World!')", "msg('Hello World!')"],
+        answer: "alert('Hello World!')",
+        
+    },
+    {
+        question: "In JavaScript to create an array you use:",
+        choices: ["parenthese", "curly brackets", "arr()", "square brackets"],
+        answer: "square brackets",
+    }
   ];
   
   var questionEl = document.querySelector("#question");
@@ -25,7 +41,7 @@ var questions = [
   var questionIndex = 0;
   var correctCount = 0;
   
-  var time = 20;
+  var time = 30;
   var intervalId;
   
   function endQuiz() {
@@ -84,8 +100,8 @@ var questions = [
         correctCount++;
       } else {
         questionResultEl.textContent = "Incorrect";
-        time = time - 2;
-        timerEl.textContent = time;
+        time = time - 4;
+        timerEl.textContent = "Time: " + time;
       }
     }
     setTimeout(nextQuestion, 2000);
