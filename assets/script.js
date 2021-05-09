@@ -67,9 +67,8 @@ function playerName() {
   document.body.appendChild(btn);
 
   //display highscore list
-  scoreList.createElement("li");
-  var scoreDisplay= JSON.parse(localStorage.getItem("highScore"));
-
+  
+  
 }
 
 //function to end the quiz if time is 0 or questions are completed
