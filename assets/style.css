@@ -31,7 +31,7 @@
     position: absolute;
     left: 320px;
 }
-
+/* styling for individual choices */
 .choices-list{
     border: 2px solid purple;
     border-radius: 8px;
@@ -62,7 +62,7 @@
     text-align: center;
     width: 50%;
 }
-
+/* styling for highscore button */
 .input{
     position: relative;
     width: 100%;

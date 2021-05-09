@@ -11,7 +11,9 @@
 <body>
     <ol id="scoreList" class="scoreList"></ol>
     <script>
+        // get local storage data
         var highScore = JSON.parse(localStorage.getItem("highScore"));
+        // loop to get elements from local storage and display as list
         for (var i = 0; i < highScore.length; i++) {
             console.log(highScore[i]);
             var list = document.createElement("li");
