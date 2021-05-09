@@ -12,9 +12,9 @@ var questions = [
   },
   {
     question:
-      "The condition in an if / else statement is enclosed within ____.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses",
+      "How do you call a function named 'myFunction'?",
+    choices: ["call myFunction()", "function myFunction()", "myFunction call ()", "function=myFunction()"],
+    answer: "function myFunction()",
   },
   {
     question: "How to insert a comment that has more than one line?",
@@ -31,7 +31,17 @@ var questions = [
     question: "In JavaScript to create an array you use:",
     choices: ["parenthese", "curly brackets", "arr()", "square brackets"],
     answer: "square brackets",
-  }
+  },
+  {
+    question: "How to write an IF statement in JavaScript?",
+    choices: ["if(i == 5", "if(i==5)", "if i == 5", "if (i==5{}"],
+    answer: "if(i==5)",
+  },
+  {
+  question: "JavaScript is the same as Java",
+  choices: ["True", "False"],
+  answer: "False",
+  },
 ];
 
 var questionEl = document.querySelector("#question");
@@ -66,9 +76,6 @@ function playerName() {
   document.body.appendChild(inputName);
   document.body.appendChild(btn);
 
-  //display highscore list
-  
-  
 }
 
 //function to end the quiz if time is 0 or questions are completed

@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores!</title>
 </head>
+
 <body>
     <ol id="scoreList" class="scoreList"></ol>
     <script>
-        var highScore =JSON.parse(localStorage.getItem("highScore"));
+        var highScore = JSON.parse(localStorage.getItem("highScore"));
         for (var i = 0; i < highScore.length; i++) {
             console.log(highScore[i]);
             var list = document.createElement("li");
-            var textnode = document.createTextNode(highScore);
+            var textnode = document.createTextNode(highScore[i]);
             list.appendChild(textnode);
-            list.textContent = highScore;
+            list.textContent = JSON.stringify(highScore[i]);
             scoreList.appendChild(list);
         }
     </script>
 </body>
+
 </html>
