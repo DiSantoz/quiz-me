@@ -2,13 +2,13 @@
 
 ## Description
 
-Test your knowledge of JavaScript with this timed quiz. Users will have 30 seconds to answer as many questions as they can! At the end of the quiz users can enter their initials to submit their highscore. Users will also be able to view their highscores and beat their score or other users score.
+Test your knowledge of JavaScript with this timed quiz. Users will have 30 seconds to answer as many questions as they can! At the end of the quiz users can enter their initials to submit their high score. Users will also be able to view their high scores and beat their score or other users score.
 
 Test yourself with [Quiz-Me: JavaScript Edition!](https://disantoz.github.io/quiz-me/)! 
 
 ## Usage
 
-The Quiz will begin with the first question displayed, a list of choices, a timer on the top right and a button that redurects you to the highscore list:
+The Quiz will begin with the first question displayed, a list of choices, a timer on the top right and a button that redirects you to the high score list:
 
 ![alt text](./assets/images/start.png "Times ticking, get to clicking")
 
@@ -20,7 +20,7 @@ At the end of the quiz, the users score will be displayed, along with a text box
 
 ![alt text](./assets/images/initial.png "Enter your initial and earn bragging rights!")
 
-Users can then click on the highscore button in the beginning of the quiz to view their past scores!
+Users can then click on the high score button in the beginning of the quiz to view their past scores!
 
 
 ## License
