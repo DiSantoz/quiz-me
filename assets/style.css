@@ -33,7 +33,7 @@
     background-color: rgb(110, 40, 110);
     color: white;
     padding: 5px;
-    font-size: 20px;
+    font-size: 27px;
 }
 
 .choices-list:hover{
@@ -48,4 +48,21 @@
     position: absolute;
     bottom: 150px;
     width: 100%;
+}
+
+.gameOver{
+    font-style: oblique;
+    font-size: 25px;
+    text-align: center;
+    width: 50%;
+}
+
+.input{
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+}
+
+.btn{
+    position:relative;
 }

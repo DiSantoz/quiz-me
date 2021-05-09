@@ -45,20 +45,25 @@ var questions = [
   var time = 30;
   var intervalId;
   
-  //player enters name at end of game
+  //player enters name at end of quiz
   function playerName (){
       var inputName = document.createElement("input");
+      inputName.className ="input";
+      inputName.innerHTML = "";
       var btn = document.createElement("BUTTON")
+      btn.className = "btn";
       btn.innerHTML = "Submit!"; 
       inputName.setAttribute ("type", "text");
       document.body.appendChild(inputName);
       document.body.appendChild(btn)
   } 
+
 //function to end the quiz if time is 0 or questions are completed
   function endQuiz() {
     clearInterval(intervalId);
     var body = document.body;
-    body.innerHTML = "Game over, You scored " + correctCount;
+    body.className = "gameOver";
+    body.innerHTML = "Game over, You scored " + correctCount + "<br />" + "Enter your initials below: ";
     playerName();
   }
   
