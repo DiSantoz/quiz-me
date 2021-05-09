@@ -7,13 +7,16 @@
     <title>High Scores!</title>
 </head>
 <body>
+    <ol id="scoreList" class="scoreList"></ol>
     <script>
         var highScore =JSON.parse(localStorage.getItem("highScore"));
         for (var i = 0; i < highScore.length; i++) {
             console.log(highScore[i]);
             var list = document.createElement("li");
+            var textnode = document.createTextNode(highScore);
+            list.appendChild(textnode);
             list.textContent = highScore;
-            list.appendChild(highScore[i]);
+            scoreList.appendChild(list);
         }
     </script>
 </body>
