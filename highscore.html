@@ -8,11 +8,11 @@
 </head>
 <body>
     <script>
-        JSON.parse(localStorage.getItem("highScore"));
+        var highScore =JSON.parse(localStorage.getItem("highScore"));
         for (var i = 0; i < highScore.length; i++) {
             console.log(highScore[i]);
             var list = document.createElement("li");
-            list.appendChild(highScore);
+            list.appendChild(highScore[i]);
         }
     </script>
 </body>
