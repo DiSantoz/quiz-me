@@ -48,9 +48,11 @@ var questions = [
   //player enters name at end of game
   function playerName (){
       var inputName = document.createElement("input");
-      inputName.setAttribute ("text", "text");
-      inputName.setAttribute ("submit", "");
+      var btn = document.createElement("BUTTON")
+      btn.innerHTML = "Submit!"; 
+      inputName.setAttribute ("type", "text");
       document.body.appendChild(inputName);
+      document.body.appendChild(btn)
   } 
 //function to end the quiz if time is 0 or questions are completed
   function endQuiz() {
@@ -115,7 +117,7 @@ var questions = [
         timerEl.textContent = "Time: " + time;
       }
     }
-    setTimeout(nextQuestion, 2000);
+    setTimeout(nextQuestion, 1000);
   }
   
   displayQuestion();
