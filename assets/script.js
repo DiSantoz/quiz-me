@@ -52,6 +52,7 @@ function playerName() {
   var btn = document.createElement("BUTTON")
   btn.className = "btn";
   btn.innerHTML = "Submit!";
+
   //local storage of name and high score
   var highScore = JSON.parse(localStorage.getItem("highScore")) || [];
   btn.addEventListener("click", function (event) {
@@ -64,6 +65,10 @@ function playerName() {
   inputName.setAttribute("type", "text");
   document.body.appendChild(inputName);
   document.body.appendChild(btn);
+
+  //display highscore list
+  scoreList.createElement("li");
+  var scoreDisplay= JSON.parse(localStorage.getItem("highScore"));
 
 }
 

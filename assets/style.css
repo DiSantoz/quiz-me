@@ -9,6 +9,12 @@
     text-align: right;
     font-size: 20px;
 }
+/*styling for highscore button*/
+.view{
+    position: absolute;
+    top: 10%;
+}
+
 /* styling for question */
 .question{
     width: 50%;
