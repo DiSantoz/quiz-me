@@ -1,3 +1,4 @@
+//list of questions to ask the user
 var questions = [
     {
       question: "JavaScipt is a ___ - side programming language:",
@@ -40,14 +41,23 @@ var questions = [
   
   var questionIndex = 0;
   var correctCount = 0;
-  
+ 
   var time = 30;
   var intervalId;
   
+  //player enters name at end of game
+  function playerName (){
+      var inputName = document.createElement("input");
+      inputName.setAttribute ("text", "text");
+      inputName.setAttribute ("submit", "");
+      document.body.appendChild(inputName);
+  } 
+//function to end the quiz if time is 0 or questions are completed
   function endQuiz() {
     clearInterval(intervalId);
     var body = document.body;
     body.innerHTML = "Game over, You scored " + correctCount;
+    playerName();
   }
   
   function updateTime() {
@@ -57,7 +67,8 @@ var questions = [
       endQuiz();
     }
   }
-  
+
+//function to display the question and choices on screen
   function displayQuestion() {
     
     if (time == 0) {
@@ -82,7 +93,7 @@ var questions = [
       multipleChoiceEl.append(questionListItem);
     }
   }
-  
+  //function to generate next question
   function nextQuestion() {
     questionIndex++;
     if (questionIndex === questions.length) {
@@ -90,7 +101,7 @@ var questions = [
     }
     displayQuestion();
   }
-  
+  //verifies if quesiton is correct, deducts time if incorrect
   function checkAnswer(event) {
     clearInterval(intervalId);
     if (event.target.matches("li")) {
