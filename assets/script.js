@@ -56,6 +56,10 @@ var questions = [
       inputName.setAttribute ("type", "text");
       document.body.appendChild(inputName);
       document.body.appendChild(btn)
+
+    //local storage of name and high score
+      var highScore= JSON.parse(localStorage.getItem("highScore")) || [];
+      var newScore = localStorage.setItem(JSON.stringify(inputName), correctCount);
   } 
 
 //function to end the quiz if time is 0 or questions are completed
